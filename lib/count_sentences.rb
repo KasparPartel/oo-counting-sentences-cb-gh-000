@@ -16,6 +16,6 @@ class String
 
   def count_sentences
     #binding.pry
-    self.split(/[\.!?]/).map(&:strip).count
+    self.split(/[\.!?]/).map(&:strip).reject!(&:empty?).count
   end
 end
